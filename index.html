@@ -4,11 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>MedicalAssistantApp</title>
 </head>
 <body>
-    <a href="./AboutUs/aboutUs.html">AboutUs</a>
-    <h1 class="main-greet">Hello User</h1>
-    
+    <!-- Navbar menu -->
+    <nav>
+    <ul class="navbar">
+        <li class="logo">
+            <a href="./index.html"><img src="./_assets/img/nurse (1).png" class="logo-img" alt="Nurse hat"></a>
+        </li>
+        <div class="menu">
+            <li class="active-item menu-item">
+                <a href="./index.html">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="./FindClinic/findclinic.html">Find clinic</a>
+            </li>
+            <li class="menu-item">
+                <a href="./AboutUs/aboutUs.html">About Us</a>
+            </li>
+            <li class="menu-item">
+                <a href="./TalkWDoc/talkwdoctor.html">Consult</a>
+            </li>
+            <li class="menu-item has-submenu">
+                <a class="dropdown"tabindex="0">Auto Diagnoze <i class="fa fa-caret-down"></i></a>
+                <ul class="submenu">
+                    <li class="subitem">
+                        <a href="./AutoDiagnoze/plamani.html" class="">Plamani</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" class="">Inima</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" class="">Sanatate Dentara</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="./AutoDiagnoze/eyespage/eyes.html" class="">Ochi</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" class="">Sistem nervos</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" class="">Covid test</a>
+                    </li>    
+                </ul>
+            </li>
+        </div>
+        
+    </ul>
+    </nav>
+
+    <div class="video-section">
+        <h1 class="primary-heading">Our Application</h1>
+        <video width="900" controls>
+            <source src="./_assets/Medical intro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="statistics-section">
+       <h1 class="primary-heading">Some statistics</h1>
+        <canvas id="diseaseGraph" >
+
+        </canvas>
+    </div>
+
+    <footer>
+
+        <p class="copyright">&copy;PatriciaBadea&RobertEftene 2020</p>
+
+    </footer>
+    <script src="./index.js"></script>
 </body>
 </html>
