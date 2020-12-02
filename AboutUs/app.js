@@ -6,15 +6,18 @@ const bOffsetInput = document.getElementById("bOffset");
 if (image.complete) init();
 image.addEventListener("load", init);
 
+
+
+
 function init() {
     const ctx = canvas.getContext("2d");
     const width = image.naturalWidth;
     const height = image.naturalHeight;
-    canvas.width = width;
-    canvas.height = height;
+    canvas.width = 800;
+    canvas.height =500;
     ctx.drawImage(image, 0, 0, width, height);
     const imageData = ctx.getImageData(0, 0, width, height);
-    console.log(imageData);
+  //  console.log(imageData);
 
     rOffsetInput.addEventListener("change", updateCanvas);
     gOffsetInput.addEventListener("change", updateCanvas);
@@ -41,5 +44,12 @@ function rgbSplit(imageData, options) {
     }
     return new ImageData(newArray, imageData.width, imageData.height);
   }
+
+  /* Demo purposes only */
+  $("figure").mouseleave(
+    function() {
+      $(this).removeClass("hover");
+    }
+  );
 
 
