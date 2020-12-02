@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <title>MedicalAssistantApp</title>
 </head>
+
 <body>
     <!-- Navbar menu -->
     <nav>
-    <ul class="navbar">
-        <li class="logo">
-            <a href="./index.html"><img src="./_assets/img/nurse (1).png" class="logo-img" alt="Nurse hat"></a>
-        </li>
-        <div class="menu">
-            <li class="active-item menu-item">
-                <a href="./index.html">Home</a>
+        <ul class="navbar">
+            <li class="logo">
+                <a href="./index.html"><img src="./_assets/img/nurse (1).png" class="logo-img" alt="Nurse hat"></a>
             </li>
-            <li class="menu-item">
-                <a href="./FindClinic/findclinic.html">Find clinic</a>
-            </li>
-            <li class="menu-item">
-                <a href="./AboutUs/aboutUs.html">About Us</a>
-            </li>
-            <li class="menu-item">
-                <a href="./TalkWDoc/talkwdoctor.html">Consult</a>
-            </li>
-            <li class="menu-item has-submenu">
-                <a class="dropdown"tabindex="0">Auto Diagnoze <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                    <li class="subitem">
-                        <a href="./AutoDiagnoze/plamani.html" class="">Plamani</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Inima</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Sanatate Dentara</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="./AutoDiagnoze/eyespage/eyes.html" class="">Ochi</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Sistem nervos</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Covid test</a>
-                    </li>    
-                </ul>
-            </li>
-        </div>
-        
-    </ul>
+            <div class="menu">
+                <li class="active-item menu-item">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./FindClinic/findclinic.html">Find clinic</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./AboutUs/aboutUs.html">About Us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./TalkWDoc/talkwdoctor.html">Consult</a>
+                </li>
+                <li class="menu-item has-submenu">
+                    <a class="dropdown" tabindex="0">Auto Diagnoze <i class="fa fa-caret-down"></i></a>
+                    <ul class="submenu">
+                        <li class="subitem">
+                            <a href="./AutoDiagnoze/plamani.html" class="">Plamani</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="#" class="">Inima</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="#" class="">Sanatate Dentara</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="./AutoDiagnoze/eyespage/eyes.html" class="">Ochi</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="#" class="">Sistem nervos</a>
+                        </li>
+                        <li class="subitem">
+                            <a href="#" class="">Covid test</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+        </ul>
     </nav>
 
     <div class="video-section">
@@ -63,10 +67,23 @@
     </div>
 
     <div class="statistics-section">
-       <h1 class="primary-heading">Some statistics</h1>
-        <canvas id="diseaseGraph" >
+        <h1 class="primary-heading">Some statistics</h1>
+
+        <div class="statistics-options">
+
+            <h2 class="secondary-heading">Choose a disease for which you want to see some statistics</h2>
+            <select  class="select-container" name="diseases" id="diseases">
+                <option value="Cancer">Cancer</option>
+                <option value="SIDA">Sida</option>
+                <option value="Cold">Cold</option>
+            </select>
+
+        </div>
+
+        <canvas id="diseaseGraph">
 
         </canvas>
+        <legend for="diseaseGraph"></legend>
     </div>
 
     <footer>
@@ -75,5 +92,7 @@
 
     </footer>
     <script src="./index.js"></script>
+    <script src="./graphics.js"></script>
 </body>
+
 </html>

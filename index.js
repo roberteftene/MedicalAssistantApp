@@ -8,13 +8,15 @@ submenu.addEventListener('click', () => {
     submenu.style.border = "none"
 })
 
-document.addEventListener('click',closeSubmenu,false);
+document.addEventListener('click', closeSubmenu, false);
 
 /* Close dropdown */
 function closeSubmenu(e) {
     let isClickInside = submenu.contains(e.target);
     if (!isClickInside && submenu.querySelector("#submenu-active")) {
         document.getElementById('submenu-active').id = ""
-        
+
     }
 }
+
+
