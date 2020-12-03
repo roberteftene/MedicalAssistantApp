@@ -69,21 +69,30 @@
     <div class="statistics-section">
         <h1 class="primary-heading">Some statistics</h1>
 
-        <div class="statistics-options">
 
             <h2 class="secondary-heading">Choose a disease for which you want to see some statistics</h2>
-            <select  class="select-container" name="diseases" id="diseases">
-                <option value="Cancer">Cancer</option>
-                <option value="SIDA">Sida</option>
-                <option value="Cold">Cold</option>
-            </select>
+                <!-- <select class="select-container" name="diseases" id="diseases">
+                    <option value="Cancer">Cancer</option>
+                    <option value="SIDA">Sida</option>
+                    <option value="Cold">Cold</option>
+                </select> -->
 
+            <div class="options">
+                <button class="option option-cancer">Cancer</button>
+                <button class="option option-sida">Sida</button>
+                <button class="option option-cold">Cold</button>
+            </div>
+
+
+        <div class="canvas-section">
+
+
+            <canvas id="diseaseGraph">
+
+            </canvas>
+            <legend for="diseaseGraph"></legend>
         </div>
 
-        <canvas id="diseaseGraph">
-
-        </canvas>
-        <legend for="diseaseGraph"></legend>
     </div>
 
     <footer>
