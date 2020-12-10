@@ -20,3 +20,34 @@
         opacity: 1;
     }
 }
+
+.playBtn {
+    animation: playBtnAnim 2s  1s;
+}
+
+@keyframes playBtnAnim {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.presentation-video {
+    /* animation: presentationVideoAnim 2s  1s; */
+}
+
+@keyframes presentationVideoAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

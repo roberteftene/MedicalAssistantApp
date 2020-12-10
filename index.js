@@ -41,6 +41,15 @@ function goTop() {
 }
 
 
+/* Video section */
+
+let playVideoBtn = document.querySelector('.playBtn').addEventListener('click', () => {
+    document.querySelector('.presentation-video').style.visibility = 'visible';
+    document.querySelector('.presentation-video').style.animation = 'presentationVideoAnim 2s';
+    document.querySelector('.playBtn').style.visibility = 'hidden'
+    
+})
+
 
 
 
