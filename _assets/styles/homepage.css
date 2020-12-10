@@ -1,10 +1,19 @@
 .primary-heading {
     color: #bd0e0e;
+    margin-top: 15px;
     text-transform: uppercase;
     font-size: 25px;
     letter-spacing: 2px;
     padding: 5px;
     font-weight: 600;
+}
+
+.secondary-heading {
+    color: #bd0e0e;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-top: 15px;
 }
 
 /* Go top Button */
@@ -26,8 +35,8 @@
     padding: 15px;
     box-shadow: 10px 5px#bd0e0e88;
     transition: all .1s ease-in-out;
-  }
-  
+}
+
 .topBtn:hover {
     background-color: #555;
 }
@@ -40,17 +49,18 @@
 .video-section {
     display: flex;
     align-items: center;
-    margin: 20px;
     flex-direction: column;
+    background-color: #b3b3b36c;
 }
 
-.presentation-video  {
+.presentation-video {
     visibility: hidden;
+    margin-bottom: 30px;
 }
 
 .playBtn {
     position: absolute;
-    top:35%;
+    top: 35%;
     margin-bottom: 30px;
     width: 240px;
     transition: all .2s ease-in-out;
@@ -59,6 +69,7 @@
 .playBtn:hover {
     transform: scale(1.2);
 }
+
 /* Statistics Section */
 
 .statistics-section {
@@ -84,7 +95,7 @@
     font-weight: bold;
     padding: 10px;
     text-transform: uppercase;
-    box-shadow: 10px 5px   #5c5c5c;
+    box-shadow: 10px 5px #5c5c5c;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
@@ -120,4 +131,161 @@
 .graphic-legend-item:hover {
     transform: scale(1.1);
     font-weight: bold;
+}
+
+/* Keypoints Section */
+
+.cards-layout {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.keyPoints-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b3b3b36c;
+}
+
+.keypoint-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 400px;
+}
+
+.keypoint-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.1)
+}
+
+.card-details {
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+.keypoint-description {
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: left;
+    color: rgba(36, 36, 36, 0.842);
+}
+
+@media all and (max-width: 1220px) {
+    .keypoint-card {
+        width: 300px;
+    }
+
+    .keypoint-card img {
+        width: 300px;
+    }
+
+    #diseaseGraph {
+        width: 800px;
+    }
+
+    .legend {
+        display: none;
+    }
+
+    .playBtn {
+        top: 35%;
+        width: 300px;
+    }
+    .option {
+        margin: 20px;
+    }
+}
+
+/* Tablet media queries */
+
+
+@media all and (max-width: 890px) {
+    .cards-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keypoint-card {
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    .keypoint-card img {
+        width: 400px;
+    }
+
+    .keypoint-card:hover {
+        transform: scale(1);
+    }
+
+    .option {
+        margin: 20px;
+    }
+
+    .option:hover {
+        transform: scale(1);
+    }
+
+    #diseaseGraph {
+        width: 600px;
+    }
+
+    .playBtn {
+        top: 30%;
+        width: 200px;
+    }
+
+
+}
+
+/* Mobile media queries */
+
+@media all and (max-width: 650px) {
+
+    #diseaseGraph {
+        width: 400px;
+    }
+
+    .secondary-heading {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .playBtn {
+        top: 50%;
+        width: 150px;
+    }
+
+}
+
+@media all and (max-width: 400px) {
+    .keypoint-card {
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .keypoint-card img {
+        width: 300px;
+    }
+
+    .option {
+        margin: 10px;
+        font-size: 12px;
+    }
+
+    #diseaseGraph {
+        width: 350px;
+    }
+
+    .playBtn {
+        top: 50%;
+    }
 }
