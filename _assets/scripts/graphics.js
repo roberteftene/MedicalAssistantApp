@@ -104,12 +104,16 @@ var ColdChart = new DeseaseBarchart({
     data: dataCold,
     colors: ["#980B0B", "#F78D8D", "#4B0606", "#ED1D1D", "#FF4754", "#FF0A1B"]
 });
+/* Audio Sounds */
+let showGraphAudio = new Audio('./_assets/audio/showGraph.mp3');
 
+/* Desease options Buttons */ 
 let deseaseOptionCancer = document.querySelector('.option-cancer');
 let deseaseOptionSida = document.querySelector('.option-sida');
 let deseaseOptionCold = document.querySelector('.option-cold');
 
 deseaseOptionCancer.addEventListener('click',() => {
+    showGraphAudio.play()
     context.clearRect(0, 0, diseaseGraphCanva.width, diseaseGraphCanva.height);
     CancerChart.draw();
     barIndex = 0;
@@ -126,6 +130,7 @@ deseaseOptionCancer.addEventListener('click',() => {
 })
 
 deseaseOptionSida.addEventListener('click', () => {
+    showGraphAudio.play()
     context.clearRect(0, 0, diseaseGraphCanva.width, diseaseGraphCanva.height);
     SidaChart.draw();
     barIndex = 0;
@@ -140,6 +145,7 @@ deseaseOptionSida.addEventListener('click', () => {
 })
 
 deseaseOptionCold.addEventListener('click', () => {
+    showGraphAudio.play()
     context.clearRect(0, 0, diseaseGraphCanva.width, diseaseGraphCanva.height);
     ColdChart.draw();
     barIndex = 0;

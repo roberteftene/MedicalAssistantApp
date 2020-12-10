@@ -21,6 +21,7 @@ function closeSubmenu(e) {
 
 /* Go to top button */
 let topBtn = document.getElementById('goTopBtn');
+let goTopAudio = new Audio('./_assets/audio/goTop.mp3')
 
 window.onscroll = () => {
     if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -31,12 +32,16 @@ window.onscroll = () => {
 }
 
 function goTop() {
+    goTopAudio.play();
     document.body.scrollTop = 0;
     document.documentElement.scrollTo({
         top: 0,
         behavior: "smooth"
     })
 }
+
+
+
 
 
 
