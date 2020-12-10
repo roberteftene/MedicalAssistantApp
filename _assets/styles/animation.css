@@ -22,7 +22,7 @@
 }
 
 .playBtn {
-    animation: playBtnAnim 2s  1s;
+    animation: playBtnAnim 2s  .5s;
 }
 
 @keyframes playBtnAnim {

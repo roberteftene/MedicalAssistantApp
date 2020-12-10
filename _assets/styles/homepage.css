@@ -50,9 +50,9 @@
 
 .playBtn {
     position: absolute;
-    top:40%;
+    top:35%;
     margin-bottom: 30px;
-    width: 130px;
+    width: 240px;
     transition: all .2s ease-in-out;
 }
 
