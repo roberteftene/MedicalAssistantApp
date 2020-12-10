@@ -44,6 +44,21 @@
     flex-direction: column;
 }
 
+.presentation-video  {
+    visibility: hidden;
+}
+
+.playBtn {
+    position: absolute;
+    top:35%;
+    margin-bottom: 30px;
+    width: 240px;
+    transition: all .2s ease-in-out;
+}
+
+.playBtn:hover {
+    transform: scale(1.2);
+}
 /* Statistics Section */
 
 .statistics-section {
