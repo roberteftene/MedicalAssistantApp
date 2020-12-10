@@ -19,4 +19,24 @@ function closeSubmenu(e) {
     }
 }
 
+/* Go to top button */
+let topBtn = document.getElementById('goTopBtn');
+
+window.onscroll = () => {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topBtn.style.display = "block"
+    } else {
+        topBtn.style.display = "none"
+    }
+}
+
+function goTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
+
+
 
