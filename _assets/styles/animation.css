@@ -5,6 +5,37 @@
     transition: all .2s;
 }
 
+.playBtn {
+    animation: playBtnAnim 2s  .5s;
+}
+
+.quote-card {
+    animation: dropCard 1.5s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes playBtnAnim {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes presentationVideoAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    30% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
 
 @keyframes headingPrimaryAnimation {
     0% {
@@ -21,33 +52,14 @@
     }
 }
 
-.playBtn {
-    animation: playBtnAnim 2s  .5s;
-}
-
-@keyframes playBtnAnim {
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-.presentation-video {
-    /* animation: presentationVideoAnim 2s  1s; */
-}
-
-@keyframes presentationVideoAnim {
+@keyframes dropCard {
     0% {
         opacity: 0;
-        transform: translateY(-100px);
-    }
-    30% {
-        opacity: 0.5;
+        transform: translate(-900px);
+
     }
     100% {
-        transform: scale(1);
+        top:90%;
         opacity: 1;
     }
 }
