@@ -102,33 +102,55 @@
 
         <div class="form-profile">
 
+            <div class="form-steps">
+
+                <ul class="form-steps-list">
+                    <li class="form-step form-step-1 ">Personal Details</li>
+                    <li class="form-step form-step-2 ">Emergency Details</li>
+                    <li class="form-step form-step-3 ">Validate Details</li>
+                </ul>
+
+            </div>
+
             <form action="" class="form-actual">
-                <label for="firstname">First name</label>
-                <input type="text" id="firstname">
-                <label for="lastname">Last name</label>
-                <input type="text" id="lastname">
-                <label for="gender">Choose a gender</label>
+                <input class="user-profile-name" type="text" id="firstname" placeholder="First name" required>
+                <input class="user-profile-name" type="text" id="lastname" placeholder="Last name" required>
                 <div class="gender-radio-buttons">
+                <label class="gender-label" for="gender">Choose a gender</label>
+                    
+                    <div class="radio-button-item">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                    </div>
 
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label><br>
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Other</label>
-                   
+                    <div class="radio-button-item">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label><br>
+                    </div>
+
+                    <div class="radio-button-item">
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+
+                    <label style="color: #fff; margin-top: 30px;" for="start">Birthday</label>
                 </div>
-                <label for="start">Birthday</label>
 
-                <input type="date" id="start" name="trip-start"
-                       value="2018-07-22"
-                       min="2018-01-01" max="2018-12-31">
+                <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22" min="1920-01-01"
+                    max="2020-12-31" required>
+                <button class="next-step-btn">Next step<i class="fas fa-arrow-right"></i></button>
             </form>
 
         </div>
 
     </div>
+    <footer>
+
+        <p class="copyright">&copy;PatriciaBadea&RobertEftene 2020</p>
+
+    </footer>
     <script src="../../index.js"></script>
+    <script src="./talkwdoc.js"></script>
 </body>
 
 </html>
