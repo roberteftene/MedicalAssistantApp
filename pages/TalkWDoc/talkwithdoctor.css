@@ -1,3 +1,7 @@
+* {
+    outline: none;
+}
+
 .quote-section {
     width: 100%;
     display: flex;
@@ -10,17 +14,20 @@
 }
 
 .quote-card {
-    background-color: #bd0e0eda;
+    background-color: #cf0b0b7e;
     padding: 30px 30px;
     width: 30%;
     color: #fff;
     border-radius: 5px;
     box-shadow: 10px 40px 50px rgba(0, 0, 0, 0.589);
     transition: all .2s ease-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .quote-card:hover {
-    box-shadow: none;
+    box-shadow: 10px 10px  rgba(0, 0, 0, 0.589);
+
 }
 
 .quote-card h1 {
@@ -43,4 +50,220 @@
 .quote-message {
     margin-top: 20px;
     text-align: center;
+}
+
+.quote-block {
+    display: flex;
+}
+
+i {
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+/* Question Primary Section */
+
+.option-question {
+    font-size: 14px;
+}
+
+.quote-option {
+    display: flex;
+    margin:30px;
+    justify-content: space-around;
+}
+
+.option{
+    margin: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    background-color: #fff !important;
+    color: #cf0b0b;
+    font-weight: bold;
+}
+
+.option:hover, .option:hover a {
+    background-color: #222222d0!important;
+    color: #fff;
+}
+
+.option-emergency a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    color: #cf0b0b;
+
+}
+
+.option-emergency i {
+    font-size: 16px;
+    color: #cf0b0b;
+}
+
+/* Form style */
+
+.form-section {
+    width: 100%;
+    display: flex;
+    margin-top: 90px;
+}
+
+.form-profile  {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Steps Style */
+
+.form-steps {
+    width: 50%;
+}
+
+.option-border {
+    border-bottom: 2px solid #cf0b0ba4;
+}
+.form-steps-list {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.form-step {
+    
+    padding-bottom: 10px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.form-step:hover {
+    transform: rotate(5deg);
+    color: #cf0b0ba4;
+    letter-spacing: 3px;
+}
+
+/* Personal Details */
+
+.form-actual {
+    background-color:  #cf0b0b79;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 50px;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    box-shadow: -20px 20px 100px rgba(0, 0, 0, 0.589);
+
+}
+
+.form-actual input {
+    padding: 10px 35px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.404);
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+::placeholder, label {
+    color: rgba(0, 0, 0, 0.418);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.gender-label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.gender-radio-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.gender-radio-buttons input  {
+    margin: 5px;
+}
+
+.gender-radio-buttons label {
+    color: #fff;
+}
+
+.radio-button-item input {
+    border: none;
+}
+
+input[type=radio] {
+    background-color:#cf0b0b;
+}
+input[type=text]:focus {
+  
+}
+
+.user-profile-name, .user-profile {
+    width: 50%;
+}
+
+.next-step-btn {
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color:#000000bb;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    outline: none;
+}
+
+.next-step-btn:hover i, 
+.next-step-btn:hover {
+    color: #cf0b0b;
+}
+
+.next-step-btn:hover {
+    transform: translate(50px);
+}
+
+.next-step-btn i {
+    font-size: 16px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* Emergency Details */
+
+/* Validate Details */
+
+body {
+    background-color: #222222d0;
+}
+
+footer {
+    position: fixed;
 }
