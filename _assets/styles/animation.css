@@ -11,7 +11,32 @@
 
 .quote-card {
     animation: dropCard 1.5s;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.form-actual {
+    animation: formAnim 1s;
+}
+
+#speech-recognition:hover {
+    animation: pulseMic 1s infinite;
+}
+
+@keyframes formAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    30% {
+        opacity: 0.5;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes playBtnAnim {
@@ -62,4 +87,21 @@
         top:90%;
         opacity: 1;
     }
+}
+
+@keyframes pulseMic {
+    0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
 }

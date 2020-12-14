@@ -117,7 +117,7 @@ i {
     margin-top: 90px;
 }
 
-.form-profile  {
+.form-container  {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -149,10 +149,22 @@ i {
     cursor: pointer;
 }
 
-.form-step:hover {
-    transform: rotate(5deg);
+.form-step-border:hover {
     color: #cf0b0ba4;
     letter-spacing: 3px;
+}
+
+.form-step-border::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #cf0b0ba4;
+    transition: width .4s ease-in;
+}
+
+.form-step:hover::after {
+    width: 100%;
 }
 
 /* Personal Details */
@@ -190,23 +202,25 @@ i {
     letter-spacing: 1.5px;
 }
 
-.gender-label {
+.label-principle {
     color: #fff;
     margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 15px;
 }
 
-.gender-radio-buttons {
+.form-subsection {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-.gender-radio-buttons input  {
+.form-subsection input  {
     margin: 5px;
 }
 
-.gender-radio-buttons label {
+.form-subsection label {
     color: #fff;
 }
 
@@ -258,7 +272,32 @@ input[type=text]:focus {
 
 /* Emergency Details */
 
-/* Validate Details */
+.desease-category-option select {
+    padding: 5px 20px;
+    color:rgba(0, 0, 0, 0.418)
+}
+
+#desease-description {
+    padding-left: 35px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+#speech-recognition {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #222222e3;
+    width: 20%;
+    border-radius: 5px;
+}
+
+#speech-recognition i {
+    font-size: 14px;
+}
 
 body {
     background-color: #222222d0;
