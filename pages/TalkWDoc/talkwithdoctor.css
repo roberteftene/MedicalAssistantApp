@@ -9,7 +9,7 @@
     margin-top: 20px;
 }
 
-.heading-primary  {
+.heading-primary {
     margin-bottom: 20px;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .quote-card:hover {
-    box-shadow: 10px 10px  rgba(0, 0, 0, 0.589);
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.589);
 
 }
 
@@ -42,7 +42,7 @@
     font-size: 13.5px;
 }
 
-.quote-actual{
+.quote-actual {
     text-align: center;
     font-style: italic;
 }
@@ -69,11 +69,11 @@ i {
 
 .quote-option {
     display: flex;
-    margin:30px;
+    margin: 30px;
     justify-content: space-around;
 }
 
-.option{
+.option {
     margin: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -91,8 +91,9 @@ i {
     font-weight: bold;
 }
 
-.option:hover, .option:hover a {
-    background-color: #222222d0!important;
+.option:hover,
+.option:hover a {
+    background-color: #222222d0 !important;
     color: #fff;
 }
 
@@ -117,7 +118,7 @@ i {
     margin-top: 90px;
 }
 
-.form-container  {
+.form-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -133,6 +134,7 @@ i {
 .option-border {
     border-bottom: 2px solid #cf0b0ba4;
 }
+
 .form-steps-list {
     display: flex;
     justify-content: space-around;
@@ -143,7 +145,7 @@ i {
 }
 
 .form-step {
-    
+
     padding-bottom: 10px;
     transition: all .2s ease-in-out;
     cursor: pointer;
@@ -170,12 +172,12 @@ i {
 /* Personal Details */
 
 .form-actual {
-    background-color:  #cf0b0b79;
+    background-color: #cf0b0b79;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 50%;
     padding: 50px;
     margin-bottom: 100px;
     border-radius: 20px;
@@ -194,7 +196,8 @@ i {
 }
 
 
-::placeholder, label {
+::placeholder,
+label {
     color: rgba(0, 0, 0, 0.418);
     text-transform: uppercase;
     font-size: 12px;
@@ -216,7 +219,7 @@ i {
     width: 50%;
 }
 
-.form-subsection input  {
+.form-subsection input {
     margin: 5px;
 }
 
@@ -229,13 +232,13 @@ i {
 }
 
 input[type=radio] {
-    background-color:#cf0b0b;
-}
-input[type=text]:focus {
-  
+    background-color: #cf0b0b;
 }
 
-.user-profile-name, .user-profile {
+input[type=text]:focus {}
+
+.user-profile-name,
+.user-profile {
     width: 50%;
 }
 
@@ -245,7 +248,7 @@ input[type=text]:focus {
     text-transform: uppercase;
     font-weight: bold;
     border: none;
-    background-color:#000000bb;
+    background-color: #000000bb;
     color: #fff;
     font-size: 14px;
     letter-spacing: 2px;
@@ -255,7 +258,7 @@ input[type=text]:focus {
     outline: none;
 }
 
-.next-step-btn:hover i, 
+.next-step-btn:hover i,
 .next-step-btn:hover {
     color: #cf0b0b;
 }
@@ -274,7 +277,7 @@ input[type=text]:focus {
 
 .desease-category-option select {
     padding: 5px 20px;
-    color:rgba(0, 0, 0, 0.418)
+    color: rgba(0, 0, 0, 0.418)
 }
 
 #desease-description {
@@ -296,6 +299,43 @@ input[type=text]:focus {
 }
 
 #speech-recognition i {
+    font-size: 14px;
+}
+
+.image-upload {
+    background-color: #fff;
+    width: 50%;
+    height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.image-upload p {
+    color: rgba(0, 0, 0, 0.418);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 10px 35px;
+}
+
+.uploaded-image {
+    width: 70px;
+    height: 70px;
+}
+.delete-images {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #222222e3;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.delete-images i {
     font-size: 14px;
 }
 

@@ -112,7 +112,7 @@
 
             </div>
 
-            <form action="" class="form-actual form-profile">
+            <form action="" id="form-profile" class="form-actual form-profile">
                 <input class="user-profile-name" type="text" id="firstname" placeholder="First name" required>
                 <input class="user-profile" type="text" id="lastname" placeholder="Last name" required>
                 <input type="text" class="user-profile-name" id="country" placeholder="Country" required>
@@ -140,14 +140,11 @@
 
                 <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22" min="1920-01-01"
                     max="2020-12-31" required>
-                <button class="next-step-btn">Next step<i class="fas fa-arrow-right"></i></button>
+                <button type="submit" form="form-profile" class="next-step-btn">Next step<i
+                        class="fas fa-arrow-right"></i></button>
             </form>
 
-            <form action="" class="form-actual form-desease">
-                <input class="user-profile-name" type="text" id="firstname" placeholder="First name" required>
-                <input class="user-profile" type="text" id="lastname" placeholder="Last name" required>
-                <input type="text" class="user-profile-name" id="country" placeholder="Country" required>
-                <input type="text" class="user-profile" id="phone" placeholder="Phone" required>
+            <form action="" id="form-desease" class="form-actual form-desease">
                 <div class="form-subsection">
                     <label class="label-principle" for="gender">Choose from the list below the symptoms you feel you
                         have</label>
@@ -201,9 +198,22 @@
                     <label for="start" class="label-principle">Please chose the last date when you went to an consult
                         regarding your emergency</label>
                 </div>
-                <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22"
-                min="1920-01-01" max="2020-12-31" required>
-                <button class="next-step-btn">Next step<i class="fas fa-arrow-right"></i></button>
+                <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22" min="1920-01-01"
+                    max="2020-12-31" required>
+                <div class="form-subsection">
+                    <label for="" class="label-principle">If you have any images regarding your emergancy please drop
+                        them bellow</label>
+                    <button type="button" class="delete-images" onclick="removeImages()"><i class="fas fa-trash-alt"></i></button>
+
+                </div>
+
+                <div class="image-upload">
+                    <p> Drop your images here </p>
+                </div>
+
+                <button type="submit" form="form-desease" class="next-step-btn">Next step<i
+                        class="fas fa-arrow-right"></i></button>
+
             </form>
 
         </div>
@@ -217,6 +227,7 @@
     <script src="../../index.js"></script>
     <script src="./talkwdoc.js"></script>
     <script src="../../_assets/scripts/speechrecognition.js"></script>
+    <script src="../../_assets/scripts/DragAndDrop.js"></script>
 </body>
 
 </html>
