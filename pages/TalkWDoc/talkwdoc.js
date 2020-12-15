@@ -6,10 +6,12 @@ const displayFormOption = document.querySelector('.option-completeForm');
 const profileFormOption = document.querySelector('.form-step-1');
 const emergencyFormOption = document.querySelector('.form-step-2');
 const validateFormOption = document.querySelector('.form-step-3');
+let deleteImageBtn = document.querySelector('.delete-images');
 function app() {
     profileForm.style.display = "none";
     deseaseForm.style.display = 'none';
     formSteps.style.display = "none"
+    deleteImageBtn.style.visibility = 'hidden'
 }
 
 displayFormOption.addEventListener('click', () => {
