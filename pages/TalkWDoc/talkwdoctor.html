@@ -11,6 +11,9 @@
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="../../_assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" />
     <title>Talk with DOC</title>
 </head>
 
@@ -117,7 +120,7 @@
                 <input class="user-profile" type="text" id="lastname" placeholder="Last name" required>
                 <input type="text" class="user-profile-name" id="country" placeholder="Country" required>
                 <input type="text" class="user-profile" id="phone" placeholder="Phone" required>
-                <div class="gender-radio-buttons form-subsection">
+                <div id="gender" class="gender-radio-buttons form-subsection">
                     <label class="label-principle" for="gender">Choose a gender</label>
 
                     <div class="radio-button-item">
@@ -138,9 +141,9 @@
                     <label style="color: #fff; margin-top: 30px;" for="start">Birthday</label>
                 </div>
 
-                <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22" min="1920-01-01"
-                    max="2020-12-31" required>
-                <button type="submit" form="form-profile" class="next-step-btn">Next step<i
+                <input class="user-profile" type="date" id="birthday" name="trip-start" value="2018-07-22"
+                    min="1920-01-01" max="2020-12-31" required>
+                <button type="submit" form="form-profile" class="next-step-btn" id="next-btn-profile">Next step<i
                         class="fas fa-arrow-right"></i></button>
             </form>
 
@@ -155,7 +158,7 @@
                     </div>
 
                     <div class="radio-button-item">
-                        <input type="checkbox" id="feverSym" name="fever" value="fever" required>
+                        <input type="checkbox" id="feverSym" name="fever" value="fever">
                         <label for="feverSym">Fever</label><br>
                     </div>
 
@@ -166,10 +169,14 @@
 
                     <div class="radio-button-item">
                         <input type="checkbox" id="backPainSym" name="backPain" value="backPain">
-                        <label for="headacheSym">Back pain</label>
+                        <label for="backPainSym">Back pain</label>
                     </div>
 
-                    <label style="color: #fff; margin-top: 30px;" for="start">Birthday</label>
+                    <div class="radio-button-item">
+                        <input type="checkbox" id="otherSym" name="otherSym" value="otherSym">
+                        <label for="otherSym">Other</label>
+                    </div>
+
                 </div>
 
                 <div class="desease-category-option form-subsection">
@@ -198,12 +205,13 @@
                     <label for="start" class="label-principle">Please chose the last date when you went to an consult
                         regarding your emergency</label>
                 </div>
-                <input class="user-profile" type="date" id="start" name="trip-start" value="2018-07-22" min="1920-01-01"
+                <input class="user-profile" type="date" id="last-consult" name="trip-start" value="2018-07-22" min="1920-01-01"
                     max="2020-12-31" required>
                 <div class="form-subsection">
                     <label for="" class="label-principle">If you have any images regarding your emergancy please drop
                         them bellow</label>
-                    <button type="button" class="delete-images" onclick="removeImages()"><i class="fas fa-trash-alt"></i></button>
+                    <button type="button" class="delete-images" onclick="removeImages()"><i
+                            class="fas fa-trash-alt"></i></button>
 
                 </div>
 
@@ -211,8 +219,15 @@
                     <p> Drop your images here </p>
                 </div>
 
-                <button type="submit" form="form-desease" class="next-step-btn">Next step<i
+                <button id="deseaseFormSubmitBtn" type="submit" form="form-desease" class="next-step-btn">Verify details<i
                         class="fas fa-arrow-right"></i></button>
+
+            </form>
+
+            <form id="form-validate" class="form-actual form-validate">
+
+                <label for="" class="label-principle"> Please find below your informations. If is something you would want to change please select from above at which section you would like to go back</label>
+
 
             </form>
 
@@ -228,6 +243,12 @@
     <script src="./talkwdoc.js"></script>
     <script src="../../_assets/scripts/speechrecognition.js"></script>
     <script src="../../_assets/scripts/DragAndDrop.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

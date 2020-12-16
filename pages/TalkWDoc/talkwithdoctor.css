@@ -339,6 +339,18 @@ input[type=text]:focus {}
     font-size: 14px;
 }
 
+/* Validate form */
+
+#form-validate {
+    align-items: flex-start;
+}
+
+.validate-details {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
 body {
     background-color: #222222d0;
 }
