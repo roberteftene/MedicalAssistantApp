@@ -144,6 +144,7 @@ footer {
     background-color: #bd0e0e;
     color: #fff !important;
     padding: 10px;
+    z-index: 1000;
 }
 
 #submenu-active {
@@ -152,6 +153,7 @@ footer {
     font-size: 12px;
     background-color:#fff;
     margin-top:5px;
+    z-index: 1000;
     
 }
 
