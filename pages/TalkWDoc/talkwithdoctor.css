@@ -358,3 +358,72 @@ body {
 footer {
     position: fixed;
 }
+
+/* Media queries */
+
+@media all and (max-width: 1420px) {
+    .quote-card {
+        width: 50%;
+    }
+
+    .form-steps {
+        width: 80%;
+    }
+
+    .form-validate, .form-profile, .form-desease {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 890px) {
+    .quote-card {
+        width: 80%;
+    }
+
+    .form-steps-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-steps-list li {
+        margin-top: 15px;
+    }
+
+    .form-subsection {
+        width: 80%;
+    }
+    .image-upload {
+        width: 80%;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+    .quote-card .heading-primary {
+        font-size: 16px;
+    }
+
+    .fa-quote-left, .fa-quote-right {
+        font-size: 14px;
+    }
+
+    .quote-option {
+        margin: 10px;
+    }
+
+    .option-completeForm, .option-emergency {
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .form-validate, .form-profile, .form-desease {
+        width: 100%;
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+
+    .image-upload {
+        width: 80%;
+    }
+}
