@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aboutUs.css">
     <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>AboutUs</title>
 
     
@@ -59,141 +59,73 @@
     </nav>
     <br>
     <p>WHO ARE WE?</p> 
-    <div class = "introduction">
-        <h1>
-            Our website is a medical assistant application that offers easy access to specialized doctors,
-        established by Patricia Badea and Robert Eftene.<br>
-            Our site is dedicated to visitors by providing medical information, advice and recommendations for medical services.<br>
-            We are aware that we need better medical information and we know that the road to recovery is paved with quality medical information, 
-        easy to understand and assimilate regardless of the educational history of the visitor.
-        </h1>
-        
+    <div class = "center">
+    <div class="container2">
+      <div class="text-box2">
+        <div class="hover2">
+          <h3>   Our website is a medical assistant application that offers easy access to specialized doctors,
+            established by Patricia Badea and Robert Eftene.<br>
+                Our site is dedicated to visitors by providing medical information, advice and recommendations for medical services.<br>
+               </h3>
+        </div>
+      </div>
     </div>
-    <br>
-    <p>WHAT VALUE DO WE BRING TO OUR USERS?</p> 
-    <div class = "value">
-        <h1>
-            We wanted to bring a solution for everyone to have access to medical advice from top doctors.
+    <div class="container2">
+      <div class="text-box2">
+        <div class="hover2">
+          <h3>We wanted to bring a solution for everyone to have access to medical advice from top doctors.
             Health services should be easy to access for anyone in a functioning society. 
-            And we believe that telehealth solutions are a necessary part of the future of medicine in a world connected to the internet.
-        </h1>
-        
+            And we believe that telehealth solutions are a necessary part of the future of medicine in a world connected to the internet.</h3>
+        </div>
+      </div>
     </div>
 
-
+  </div>
     <br>
-        <p>SUBSCRIBE TO OUR CHANNEL</p>
-   
-        <div class="value">
-
-     <form action="/action_page.php">
-
-    
-
-        <label for="fname" style = "display: inline-block; width: 140px; text-align: right;">First name:</label>
-        <input type="text" id="fname" name="fname" required placeholder="Popescu" size="20" maxlength="20" value pattern ="\w{5,20}" title="More than 5 characters long"><br><br>
-
-        <label for="lname" style = "display: inline-block;width: 140px;text-align: right;">Last name:</label>
-        <input type="text" id="lname" name="lname"  required placeholder="Andrei"size="20" maxlength="20" value pattern ="\w{5,20}" title="More than 5 characters long"><br><br>
-
-        <label for="email" style = "display: inline-block; width: 140px;text-align: right;">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="example@gmail.com" ><br><br>
-
-
-        <label for="phone" style = "display: inline-block; width: 140px;text-align: right;">Phone number:</label>
-        <input type="tel" id="phone" name="phone" required placeholder="075-111-1111" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
-        <br><br>
-        
-  
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male"><b>Male</b></label>
-
-        <input type="radio" id="female" name="gender" value="female" >
-        <label for="female"><b>Female</b></label><br><br>
-        
-        <fieldset>
-            <legend>I want to receive</legend>
-            <div>
-                <input type="checkbox" name="newsletter" id="check_1" />
-                <label for="check_1">Information on both my phone number and e-mail</label>
+       
+   <div class ="sdf">
+        <div class="sign-up-container">
+          <div class="envelope">
+            <div class="paper">
+              <h1>Subscribe to our channel</h1>
+              <form class="sign-up-form">
+                <input type="email" required placeholder="example@gmail.com" class="text-input" id="email"/>
+                <button onclick="messageSubscribed()" type="button" class="button" id="btnSubmit">Sign up</button>
+              </form>
             </div>
-
-            <div>
-                <input type="checkbox" name="offers" id="check_2" />
-                <label for="check_2">Information only on my phone number</label>
-            </div>
-
-            <div>
-                <input type="checkbox" name="notifications" id="check_3" />
-                <label for="check_3">Information only on my e-mail</label>
-            </div>
-
-            <div>
-                <input type="checkbox" name="nothing" id="check_4" />
-                <label for="check_4">I don't want to receive any information.</label>
-            </div>
-        </fieldset>
-
-        <input name="submit" type="Submit" value="Send" id="formbutton"/>
-        <input name="reset" type="reset" value="Clear Form" id = "clearbutton">
-      </form>
-
+            <div class="bottom-flap"></div>
+          </div>
+        </div>
     </div>
+    
     <br>
     <br>
     <div class = "center-img">
-    <figure class="snip1104 red">
-        <img src="1.png" alt="im1" />
+    <figure class="team red">
+        <img src="eu.jpg" alt="im1" />
         <figcaption>
-          <h2>COMFORT <span>ACCESSIBILITY</span></h2>
+          <h2>PATRICIA<span>BADEA</span></h2>
         </figcaption>
-        <a href="#"></a>
+       
       </figure>
 
-      <figure class="snip1104 blue hover"><img src="2.png" alt="im2" />
+      <figure class="team blue hover"><img src="2.png" alt="im2" />
         <figcaption>
-          <h2>Lynn  <span> Reyes</span></h2>
+          <h2>TEAM<span>WORK</span></h2>
         </figcaption>
-        <a href="#"></a>
+       
       </figure>
 
-      <figure class="snip1104"><img src="3.png" alt="im3" />
+      <figure class="team"><img src="rob.jpg" alt="im3" />
         <figcaption>
-          <h2>CONFIDENTIAL <span>ANONYMOUS</span></h2>
+          <h2>ROBERT <span>EFTENE</span></h2>
         </figcaption>
-        <a href="#"></a>
+     
       </figure>
     </div>
     <br>
     <br>
-
-    <div class="container">
-        <div>
-         
-          <img id="Source" src="eu si robert.png" crossorigin="anonymous"style="display: none"/>
-        </div>
-        <div>
-          
-          <canvas id="Canvas"></canvas>
-        </div>
-      </div>
-      <div class="control">
-        <div class="red">
-          <label>R:</label>
-          <input id="rOffset" type="range" min="-100" max="100" step="5" />
-        </div>
-        <div class="green">
-          <label>G:</label>
-          <input id="gOffset" type="range" min="-100" max="100" step="5" />
-        </div>
-        <div class="blue">
-          <label>B:</label>
-          <input id="bOffset" type="range" min="-100" max="100" step="5" />
-        </div>
-      </div>
-
- 
-        
+    <button onclick="goTop()" id="goTopBtn" class="topBtn" title="Go to top">Top<i class="fas fa-arrow-up"></i></button>
       <footer>
 
         <p class="copyright">&copy;RobertEftene&PatriciaBadea 2020</p>
