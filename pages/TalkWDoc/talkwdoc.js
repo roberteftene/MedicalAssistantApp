@@ -104,11 +104,8 @@ validateFormOption.addEventListener('click', () => {
 })
 
 
-
-/* Get the data from the first form */
-nextBtnProfileForm.addEventListener('click', (e) => {
+function finishProfileForm() {
     initToastr()
-    e.preventDefault();
     let valid = true;
     if (!firstName.value) {
         toastr.error('You forgot to enter the first name')
@@ -190,9 +187,96 @@ nextBtnProfileForm.addEventListener('click', (e) => {
         emergencyFormOption.classList.add('form-step-border');
         emergencyFormOption.classList.remove('form-step-border');
     }
+} 
+
+/* Get the data from the first form */
+// nextBtnProfileForm.addEventListener('click', (e) => {
+//     initToastr()
+//     e.preventDefault();
+//     let valid = true;
+//     if (!firstName.value) {
+//         toastr.error('You forgot to enter the first name')
+//         valid = false
+//     }
+//     if (!firstName.value.match(/^[a-zA-Z\-ăĂîÎțȚţŢșȘşŞâÂ]{3,30}$/)) {
+//         toastr.error('Your first name cannot contain spaces or special characters')
+//     }
+//     if (firstName.value.length < 2) {
+//         toastr.error('First name is too short')
+//         valid = false;
+//     }
+
+//     if (!lastName.value) {
+//         toastr.error('You forgot to enter the last name')
+//         valid = false
+//     }
+//     if (!lastName.value.match(/^[a-zA-Z\-ăĂîÎțȚţŢșȘşŞâÂ]{3,30}$/)) {
+//         toastr.error('Your last name cannot contain spaces or special characters')
+//     }
+//     if (lastName.value.length < 2) {
+//         toastr.error('Last name is too short')
+//         valid = false;
+//     }
+
+//     if (!country.value) {
+//         toastr.error('You forgot to enter the country')
+//         valid = false
+//     }
+//     if (!country.value.match(/^[a-zA-Z\-ăĂîÎțȚţŢșȘşŞâÂ]{3,30}$/)) {
+//         toastr.error('Your country cannot contain spaces, number or special characters')
+//     }
+//     if (country.value.length < 2) {
+//         toastr.error('Country is too short')
+//         valid = false;
+//     }
+
+//     if (!phone.value) {
+//         toastr.error('You forgot to enter your phone')
+//         valid = false
+//     }
+//     if (!phone.value.match(
+//             /^(\+4|)?(07[0-8]{1}[0-9]{1}|02[0-9]{2}|03[0-9]{2}){1}?(\s|\.|\-)?([0-9]{3}(\s|\.|\-|)){2}$/)) {
+//         toastr.error('The mobile number cannot contain letters')
+//         valid = false
+//     }
+//     if (parseInt(birthday.value.split('-', 3)[0]) >= 2010) {
+//         toastr.info('We prefer to have this form completed by adults')
+//     }
+
+//     if (genderMale.checked && (!genderFemale.checked) && (!genderOther.checked)) {
+//         genderSelected = 'male'
+//     } else if ((!genderMale.checked) && (genderFemale.checked) && (!genderOther.checked)) {
+//         genderSelected = 'female'
+//     } else if ((!genderMale.checked) && (!genderFemale.checked) && (genderOther.checked)) {
+//         genderSelected = 'other'
+//     } else {
+//         toastr.error('Please select a gender')
+//         valid = false
+//     }
+
+//     if (valid === true) {
+//         toastr.success('Perfect! Continue to next section!');
+//         profileData = {
+//             firstName: firstName.value,
+//             lastName: lastName.value,
+//             country: country.value,
+//             phone: phone.value,
+//             gender: genderSelected,
+//             birthday: birthday.value
+
+//         }
+//         console.log(profileData);
+//         profileForm.style.display = 'none'
+//         profileFormOption.classList.remove('option-border')
+//         emergencyFormOption.classList.add('option-border')
+//         deseaseForm.style.display = 'flex'
+//         profileFormOption.classList.add('form-step-border');
+//         emergencyFormOption.classList.add('form-step-border');
+//         emergencyFormOption.classList.remove('form-step-border');
+//     }
 
 
-})
+// })
 
 /* Get the data from the second form */
 deseasaSubmitFormBtn.addEventListener('click', (e) => {
