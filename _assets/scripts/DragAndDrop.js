@@ -21,7 +21,6 @@ imageUploadContainer.ondrop = e => {
                 draggedImage.selected = 0;
                 imagesUploaded.push(draggedImage);
                 imagesArea.appendChild(draggedImage);
-
                 let checkedInput = document.createElement('input')
                 checkedInput.setAttribute('type','checkbox');
                 checkedInput.id = 'checkbox-' + (imagesUploaded.length - 1);

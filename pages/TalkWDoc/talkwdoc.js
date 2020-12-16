@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', app);
 const profileForm = document.querySelector('.form-profile');
 const deseaseForm = document.querySelector('.form-desease');
+const validateForm = document.querySelector('.form-validate');
 const formSteps = document.querySelector('.form-steps-list');
 const displayFormOption = document.querySelector('.option-completeForm');
 const profileFormOption = document.querySelector('.form-step-1');
@@ -33,44 +34,8 @@ const deseaseDescription = document.getElementById('desease-description')
 const lastConsult = document.getElementById('last-consult');
 const imageArea = document.querySelector('.image-upload');
 
+let finishConsultBtn;
 // Toastr configuration
-
-function app() {
-    profileForm.style.display = "none";
-    deseaseForm.style.display = 'none';
-    formSteps.style.display = "none"
-    deleteImageBtn.style.visibility = 'hidden'
-}
-
-displayFormOption.addEventListener('click', () => {
-    profileForm.style.display = "flex"
-    formSteps.style.display = 'flex'
-    profileFormOption.classList.add('option-border')
-    emergencyFormOption.classList.add('form-step-border');
-    document.querySelector('footer').style.position = 'unset';
-
-})
-
-profileFormOption.addEventListener('click', () => {
-    deseaseForm.style.display = 'none'
-    profileForm.style.display = "flex"
-    emergencyFormOption.classList.remove('option-border')
-    profileFormOption.classList.add('option-border')
-    profileFormOption.classList.remove('form-step-border');
-    emergencyFormOption.classList.add('form-step-border');
-})
-
-emergencyFormOption.addEventListener('click', () => {
-    profileForm.style.display = 'none'
-    profileFormOption.classList.remove('option-border')
-    emergencyFormOption.classList.add('option-border')
-    deseaseForm.style.display = 'flex'
-    profileFormOption.classList.add('form-step-border');
-    emergencyFormOption.classList.add('form-step-border');
-    emergencyFormOption.classList.remove('form-step-border');
-
-})
-
 function initToastr() {
     toastr.options.closeMethod = 'fadeOut';
     toastr.options.closeDuration = 300;
@@ -79,6 +44,66 @@ function initToastr() {
     toastr.options.progressBar = true;
     toastr.options.newestOnTop = false;
 }
+
+function app() {
+    profileForm.style.display = "none";
+    deseaseForm.style.display = 'none';
+    validateForm.style.display = 'none'
+    formSteps.style.display = "none"
+    deleteImageBtn.style.visibility = 'hidden'
+}
+
+// Events listeners for form steps list
+
+displayFormOption.addEventListener('click', () => {
+    profileForm.style.display = "flex"
+    formSteps.style.display = 'flex'
+    profileFormOption.classList.add('option-border')
+    emergencyFormOption.classList.add('form-step-border');
+    validateFormOption.classList.add('form-step-border');
+    document.querySelector('footer').style.position = 'unset';
+
+})
+
+profileFormOption.addEventListener('click', () => {
+    deseaseForm.style.display = 'none'
+    validateForm.style.display = 'none'
+    profileForm.style.display = "flex"
+    emergencyFormOption.classList.remove('option-border')
+    validateFormOption.classList.remove('option-border')
+    profileFormOption.classList.add('option-border')
+    profileFormOption.classList.remove('form-step-border');
+    emergencyFormOption.classList.add('form-step-border');
+    validateFormOption.classList.add('form-step-border');
+})
+
+emergencyFormOption.addEventListener('click', () => {
+    profileForm.style.display = 'none'
+    validateForm.style.display = 'none'
+    profileFormOption.classList.remove('option-border')
+    validateFormOption.classList.remove('option-border');
+    emergencyFormOption.classList.add('option-border')
+    deseaseForm.style.display = 'flex'
+    profileFormOption.classList.add('form-step-border');
+    validateFormOption.classList.add('form-step-border');
+    emergencyFormOption.classList.remove('form-step-border');
+
+})
+
+validateFormOption.addEventListener('click', () => {
+    deseaseForm.style.display = 'none'
+    profileForm.style.display = 'none'
+    validateForm.style.display = 'flex'
+    profileFormOption.classList.remove('option-border')
+    emergencyFormOption.classList.remove('option-border')
+    validateFormOption.classList.add('option-border')
+    profileFormOption.classList.add('form-step-border')
+    emergencyFormOption.classList.add('form-step-border')
+    validateFormOption.classList.remove('form-step-border')
+
+})
+
+
 
 /* Get the data from the first form */
 nextBtnProfileForm.addEventListener('click', (e) => {
@@ -156,10 +181,6 @@ nextBtnProfileForm.addEventListener('click', (e) => {
             birthday: birthday.value
 
         }
-        firstName.value = ' ';
-        lastName.value = ' ';
-        country.value = ' ';
-        phone.value = ' ';
         console.log(profileData);
         profileForm.style.display = 'none'
         profileFormOption.classList.remove('option-border')
@@ -173,12 +194,13 @@ nextBtnProfileForm.addEventListener('click', (e) => {
 
 })
 
+/* Get the data from the second form */
 deseasaSubmitFormBtn.addEventListener('click', (e) => {
     e.preventDefault();
     initToastr();
     let symptoms = []
     symptomsInputs.forEach(element => {
-        if (element.checked ) {
+        if (element.checked) {
             symptoms.push(element.value)
         }
     });
@@ -204,7 +226,67 @@ deseasaSubmitFormBtn.addEventListener('click', (e) => {
             emergencyDescription: deseaseDescription.value,
             lastConsultDate: lastConsult.value
         }
-        console.log(deseaseData);
+        let fullData = {
+            ...profileData,
+            ...deseaseData
+        };
+        loadData(fullData);
+        deseaseForm.style.display = 'none'
+        profileForm.style.display = 'none'
+        validateForm.style.display = 'flex'
+        profileFormOption.classList.remove('option-border')
+        emergencyFormOption.classList.remove('option-border')
+        validateFormOption.classList.add('option-border')
+        profileFormOption.classList.add('form-step-border')
+        emergencyFormOption.classList.add('form-step-border')
+        validateFormOption.classList.remove('form-step-border')
     }
 
 })
+
+/* Validate data form */
+
+function loadData(data) {
+    while (validateForm.firstChild) {
+        validateForm.removeChild(validateForm.lastChild)
+    }
+
+    let p = document.createElement('p')
+    p.setAttribute('class', 'label-principle')
+    p.style.fontSize = '15px'
+    p.style.textTransform = 'uppercase'
+    p.style.letterSpacing = '1px'
+    p.style.marginBottom = '20px'
+    p.style.lineHeight = '22px'
+    p.innerHTML = 'Please find below your informations. If is something you would want to change please select from above at which section you would like to go back'
+    validateForm.appendChild(p)
+
+    for (const [key, value] of Object.entries(data)) {
+
+
+        let item = document.createElement('p')
+        let keyUpper = key.toUpperCase();
+        item.classList.add('validate-details');
+        item.innerText = `${keyUpper}: ${value}`
+        item.classList.add('label-principle')
+
+        validateForm.appendChild(item)
+
+    }
+
+    finishConsultBtn = document.createElement('button')
+    finishConsultBtn.setAttribute('class','next-step-btn');
+    finishConsultBtn.setAttribute('type','submit')
+    finishConsultBtn.setAttribute('form','form-validate')
+    finishConsultBtn.setAttribute('onclick','finishConsult()')
+    finishConsultBtn.style.marginTop = '20px'
+    finishConsultBtn.id = 'finish-consult'
+    finishConsultBtn.innerHTML = 'Finish'
+    validateForm.appendChild(finishConsultBtn);
+
+}
+
+function finishConsult(e) {
+    e.preventDefault();
+    toastr.success('Thank you for your time, we will come back to you')
+}
