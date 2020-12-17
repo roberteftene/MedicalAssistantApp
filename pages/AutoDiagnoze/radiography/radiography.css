@@ -133,18 +133,44 @@
 /* Live webcam xray */
 .webcam-live-section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    background-color: #222222d0;
+    z-index: 1;
+}
+
+.live-cam-xray {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 500px;
-    background-color: #222222d0;
 }
 
 .container-video, .container-web {
     border: 5px solid #cf0b0bd2;
     padding: 20px;
     margin: 40px;
+    z-index: 1000;
+    width: 400 !important;
 }
 
 .start-live-xray {
-    width: 30%;
+    width: 14%;
+    margin-top: 50px;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cf0b0b94;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all .2s ease-out;
+    cursor: pointer;
+}
+
+.start-live-xray:hover {
+    background-color: #fff;
+    color: #cf0b0b;
+    transform: translateY(-10px);
 }
