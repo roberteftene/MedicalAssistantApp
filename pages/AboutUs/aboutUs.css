@@ -4,6 +4,35 @@
 }
 
 
+/* Example flex */
+.container-ex {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  background-color: #9b1a0c;
+  margin: 60px;
+  padding: 40px;
+  color: #fff;
+  border-radius: 10px;
+  transition: all 1s ease-out;
+}
+
+.card:hover {
+  transform: rotate(360deg);
+  background-color: gray;
+}
+
+@media all and (max-width: 1220px) {
+  .center {
+    flex-direction: column;
+  }
+  .text-box2 {
+    height: 300px;
+  }
+}
+
 @media all and (max-width: 890px) {
 
 
@@ -387,6 +416,8 @@ h1 {
 {
   display: flex;
 }
+
+
 
 .sdf
 { 

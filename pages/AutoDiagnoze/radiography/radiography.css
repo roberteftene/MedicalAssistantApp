@@ -41,7 +41,6 @@
     display: flex;
     flex-direction: column;
     background-color:#cf0b0bb7 ;
-    margin-bottom: 20px;
 }
 
 .image-upload {
@@ -129,4 +128,23 @@
     font-size: 16px;
     margin-right: 5px;
     color: #fff;
+}
+
+/* Live webcam xray */
+.webcam-live-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    background-color: #222222d0;
+}
+
+.container-video, .container-web {
+    border: 5px solid #cf0b0bd2;
+    padding: 20px;
+    margin: 40px;
+}
+
+.start-live-xray {
+    width: 30%;
 }

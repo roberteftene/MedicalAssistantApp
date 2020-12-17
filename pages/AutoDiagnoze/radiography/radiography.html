@@ -78,8 +78,10 @@
         <div class="x-ray-steps-container">
 
             <div class="steps-xray">
-                <button class="step-btn draw-image" onclick="drawSelectedImages()"><i class="fas fa-upload"></i>Get Image</button>
-                <button class="step-btn x-ray" onclick="addNegativeEffect()"><i class="fas fa-x-ray"></i>X-Ray IT</button>
+                <button class="step-btn draw-image" onclick="drawSelectedImages()"><i class="fas fa-upload"></i>Get
+                    Image</button>
+                <button class="step-btn x-ray" onclick="addNegativeEffect()"><i class="fas fa-x-ray"></i>X-Ray
+                    IT</button>
             </div>
 
         </div>
@@ -102,6 +104,28 @@
         </div>
 
     </div>
+
+    <div class="webcam-live-section">
+
+        <button class="start-live-xray">
+            Start Live X-Ray
+        </button>
+
+        <div class="live-cam-xray">
+
+            <div class="container-video">
+                <video src="" id="SourceVideo"></video>
+            </div>
+
+            <div class="container-web">
+                <div class="canvas">
+                    <canvas id="webcam-canvas" class="webcam"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <footer>
 
         <p class="copyright">&copy;PatriciaBadea&RobertEftene 2020</p>

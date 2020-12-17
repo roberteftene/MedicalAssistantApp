@@ -1,69 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aboutUs.css">
-    <link rel="stylesheet" href="../../styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <title>AboutUs</title>
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="aboutUs.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+    crossorigin="anonymous" />
+  <title>AboutUs</title>
+
+
 </head>
+
 <body>
-   <!-- Navbar menu -->
-   <nav>
+  <!-- Navbar menu -->
+  <nav>
     <ul class="navbar">
-        <li class="logo">
-            <a href="../index.html"><img src="../../_assets/img/nurse (1).png" class="logo-img" alt="Nurse hat"></a>
+      <li class="logo">
+        <a href="../index.html"><img src="../../_assets/img/nurse (1).png" class="logo-img" alt="Nurse hat"></a>
+      </li>
+      <div class="menu">
+        <li class="active-item menu-item">
+          <a href="../../index.html">Home</a>
         </li>
-        <div class="menu">
-            <li class="active-item menu-item">
-                <a href="../../index.html">Home</a>
+        <li class="menu-item">
+          <a href="../AboutUs/aboutUs.html">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="../TalkWDoc/talkwdoctor.html">Consult</a>
+        </li>
+        <li class="menu-item has-submenu">
+          <a class="dropdown" tabindex="0">Auto Diagnoze <i class="fa fa-caret-down"></i></a>
+          <ul class="submenu">
+            <li class="subitem">
+              <a href="../AutoDiagnoze/plamani.html" class="">Plamani</a>
             </li>
-            <li class="menu-item">
-                <a href="../AboutUs/aboutUs.html">About Us</a>
+            <li class="subitem">
+              <a href="#" class="">Inima</a>
             </li>
-            <li class="menu-item">
-                <a href="../TalkWDoc/talkwdoctor.html">Consult</a>
+            <li class="subitem">
+              <a href="#" class="">Sanatate Dentara</a>
             </li>
-            <li class="menu-item has-submenu">
-                <a class="dropdown"tabindex="0">Auto Diagnoze <i class="fa fa-caret-down"></i></a>
-                <ul class="submenu">
-                    <li class="subitem">
-                        <a href="../AutoDiagnoze/plamani.html" class="">Plamani</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Inima</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Sanatate Dentara</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="../AutoDiagnoze/eyespage/eyes.html" class="">Ochi</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Sistem nervos</a>
-                    </li>
-                    <li class="subitem">
-                        <a href="#" class="">Covid test</a>
-                    </li>    
-                </ul>
+            <li class="subitem">
+              <a href="../AutoDiagnoze/eyespage/eyes.html" class="">Ochi</a>
             </li>
-        </div>
-        
+            <li class="subitem">
+              <a href="#" class="">Sistem nervos</a>
+            </li>
+            <li class="subitem">
+              <a href="#" class="">Covid test</a>
+            </li>
+          </ul>
+        </li>
+      </div>
+
     </ul>
-    </nav>
-    <br>
-    <p>WHO ARE WE?</p> 
-    <div class = "center">
+  </nav>
+  <br>
+  <p>WHO ARE WE?</p>
+
+  <div class="container-ex">
+
+    <div class="card cardOne">
+      <h2 class="aboutRobert">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae similique inventore obcaecati vel vero! Laudantium unde est sapiente aut, aliquid quas, debitis in possimus temporibus exercitationem ipsum! Assumenda, tempore consequatur!</p>
+    </div>
+
+    <div class="card cardTwo">
+      <h2 class="aboutTriss">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, neque. Asperiores eaque officiis quod doloremque harum dolores facere repellendus praesentium? Pariatur aperiam assumenda in, ratione omnis tempore illo mollitia doloribus?</p>
+    </div>
+  </div>
+
+  <div class="center">
     <div class="container2">
       <div class="text-box2">
         <div class="hover2">
-          <h3>   Our website is a medical assistant application that offers easy access to specialized doctors,
+          <h3> Our website is a medical assistant application that offers easy access to specialized doctors,
             established by Patricia Badea and Robert Eftene.<br>
-                Our site is dedicated to visitors by providing medical information, advice and recommendations for medical services.<br>
-               </h3>
+            Our site is dedicated to visitors by providing medical information, advice and recommendations for medical
+            services.<br>
+          </h3>
         </div>
       </div>
     </div>
@@ -71,66 +91,72 @@
       <div class="text-box2">
         <div class="hover2">
           <h3>We wanted to bring a solution for everyone to have access to medical advice from top doctors.
-            Health services should be easy to access for anyone in a functioning society. 
-            And we believe that telehealth solutions are a necessary part of the future of medicine in a world connected to the internet.</h3>
+            Health services should be easy to access for anyone in a functioning society.
+            And we believe that telehealth solutions are a necessary part of the future of medicine in a world connected
+            to the internet.</h3>
         </div>
       </div>
     </div>
 
   </div>
-    <br>
-       
-   <div class ="sdf">
-        <div class="sign-up-container">
-          <div class="envelope">
-            <div class="paper">
-              <h1>Subscribe to our channel</h1>
-              <form class="sign-up-form">
-                <input type="email" required placeholder="example@gmail.com" class="text-input" id="email"/>
-                <button onclick="messageSubscribed()" type="button" class="button" id="btnSubmit">Sign up</button>
-              </form>
-            </div>
-            <div class="bottom-flap"></div>
-          </div>
+  <br>
+
+  <div class="sdf">
+    <div class="sign-up-container">
+      <div class="envelope">
+        <div class="paper">
+          <h1>Subscribe to our channel</h1>
+          <form class="sign-up-form">
+            <input type="email" required placeholder="example@gmail.com" class="text-input" id="email" />
+            <button onclick="messageSubscribed()" type="button" class="button" id="btnSubmit">Sign up</button>
+          </form>
         </div>
+        <div class="bottom-flap"></div>
+      </div>
     </div>
-    
-    <br>
-    <br>
-    <div class = "center-img">
+  </div>
+
+  <br>
+  <br>
+  <div class="center-img">
     <figure class="team red">
-        <img src="eu.jpg" alt="im1" />
-        <figcaption>
-          <h2>PATRICIA<span>BADEA</span></h2>
-        </figcaption>
-       
-      </figure>
+      <img src="eu.jpg" alt="im1" />
+      <figcaption>
+        <h2>PATRICIA<span>BADEA</span></h2>
+      </figcaption>
 
-      <figure class="team blue hover"><img src="2.png" alt="im2" />
-        <figcaption>
-          <h2>TEAM<span>WORK</span></h2>
-        </figcaption>
-       
-      </figure>
+    </figure>
 
-      <figure class="team"><img src="rob.jpg" alt="im3" />
-        <figcaption>
-          <h2>ROBERT <span>EFTENE</span></h2>
-        </figcaption>
-     
-      </figure>
-    </div>
-    <br>
-    <br>
-    <button onclick="goTop()" id="goTopBtn" class="topBtn" title="Go to top">Top<i class="fas fa-arrow-up"></i></button>
-      <footer>
+    <figure class="team blue hover"><img src="2.png" alt="im2" />
+      <figcaption>
+        <h2>TEAM<span>WORK</span></h2>
+      </figcaption>
 
-        <p class="copyright">&copy;RobertEftene&PatriciaBadea 2020</p>
+    </figure>
 
-      </footer>
-      <script src="app.js"></script>
-      <script src="../../index.js"></script>
-    
+    <figure class="team"><img src="rob.jpg" alt="im3" />
+      <figcaption>
+        <h2>ROBERT <span>EFTENE</span></h2>
+      </figcaption>
+
+    </figure>
+  </div>
+  <br>
+  <br>
+  <button onclick="goTop()" id="goTopBtn" class="topBtn" title="Go to top">Top<i class="fas fa-arrow-up"></i></button>
+  <footer>
+
+    <p class="copyright">&copy;RobertEftene&PatriciaBadea 2020</p>
+
+  </footer>
+  <script src="app.js"></script>
+  <script src="../../index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous"></script>
 
 </body>
 
