@@ -26,3 +26,107 @@
     color: #222222d0;
     text-transform: uppercase;
 }
+
+.primary-heading {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+.scanImageSection {
+    display: flex;
+    flex-direction: column;
+    background-color:#cf0b0bb7 ;
+    margin-bottom: 20px;
+}
+
+.image-upload {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: #22222298;
+    height: 300px;
+    width: 30%;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.uploaded-image {
+    width: 90px;
+    height: 90px;
+}
+.delete-images {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: #222222e3;
+    width: 10%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.delete-images i {
+    font-size: 14px;
+}
+.row-flex-layout {
+    display: flex;
+    flex-direction: row;
+}
+.x-ray-steps-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.steps-xray {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#radiographyCanvas {
+    margin-left: 90px;
+}
+
+.step-btn {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color: #000000bb;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    outline: none;
+}
+
+.step-btn:hover i,
+.step-btn:hover {
+    color: #cf0b0b;
+}
+
+.step-btn:hover {
+    transform: translate(30px);
+}
+
+.step-btn i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #fff;
+}
