@@ -1,0 +1,1 @@
+let startXray = document.getElementById

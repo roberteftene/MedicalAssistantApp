@@ -5,8 +5,21 @@ const email = document.getElementById("email")
 const topBtn = document.getElementById("goTopBtn")
 
 function messageSubscribed() {
-  subscribeAudio.play(); 
-  email.remove();
+  let valid = true
+  if(email.value.length < 10) {
+    valid = false
+    toastr.error('Your email is too short')
+  }
+  if(!email.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+    valid = false
+    toastr.error('You must enter a valid email address');
+  }
+
+  if(valid) {
+    toastr.success('You have successfully subscribed to our newsletter!')
+    email.value = " "
+    subscribeAudio.play(); 
+  }
 }
 
 

@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../_assets/styles/animation.css">
     <title>Radiography</title>
 </head>
 
@@ -63,15 +67,78 @@
         <h2 class=" heading-secondary">Get an X-Ray instantly!</h2>
         <!-- Introduction -->
         <div class="header-section">
-           
+
         </div>
     </div>
 
+
     <div class="scanImageSection">
 
-        
+        <h1 class="primary-heading"> Drop you image in the specified area and click to get an instant X-Ray </h1>
+        <div class="x-ray-steps-container">
+
+            <div class="steps-xray">
+                <button class="step-btn draw-image" onclick="drawSelectedImages()"><i class="fas fa-upload"></i>Get
+                    Image</button>
+                <button class="step-btn x-ray" onclick="addNegativeEffect()"><i class="fas fa-x-ray"></i>X-Ray
+                    IT</button>
+            </div>
+
+        </div>
+
+        <div class="row-flex-layout">
+
+
+            <div class="image-upload">
+                <p> Drop your image here</p>
+                <button type="button" class="delete-images" onclick="removeImages()"><i
+                        class="fas fa-trash-alt"></i></button>
+            </div>
+
+            <canvas id="radiographyCanvas" height="500" width="800">
+
+
+
+            </canvas>
+
+        </div>
+
     </div>
+
+    <div class="webcam-live-section">
+
+        <button class="start-live-xray">
+            Start Live X-Ray
+        </button>
+
+        <div class="live-cam-xray">
+
+            <div class="container-video">
+                <video src="" id="SourceVideo"></video>
+            </div>
+
+            <div class="container-web">
+                <div class="canvas">
+                    <canvas id="webcam-canvas" class="webcam"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+
+        <p class="copyright">&copy;PatriciaBadea&RobertEftene 2020</p>
+
+    </footer>
     <script src="../../../index.js"></script>
+    <script src="../../../_assets/scripts/DragAndDrop.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
