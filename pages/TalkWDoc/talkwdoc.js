@@ -7,7 +7,6 @@ const displayFormOption = document.querySelector('.option-completeForm');
 const profileFormOption = document.querySelector('.form-step-1');
 const emergencyFormOption = document.querySelector('.form-step-2');
 const validateFormOption = document.querySelector('.form-step-3');
-let deleteImageBtn = document.querySelector('.delete-images');
 const nextBtnProfileForm = document.getElementById('next-btn-profile');
 const deseasaSubmitFormBtn = document.getElementById('deseaseFormSubmitBtn');
 
@@ -104,7 +103,8 @@ validateFormOption.addEventListener('click', () => {
 })
 
 
-function finishProfileForm() {
+function finishProfileForm(e) {
+    e.preventDefault();
     initToastr()
     let valid = true;
     if (!firstName.value) {

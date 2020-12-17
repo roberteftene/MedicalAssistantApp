@@ -1,8 +1,7 @@
 let imageUploadContainer = document.querySelector('.image-upload');
-let radiographyCanvas = document.getElementById('radiographyCanvas');
-let context = radiographyCanvas.getContext('2d')
 let deleteImageBtn = document.querySelector('.delete-images');
 let imagesUploaded = []
+
 imageUploadContainer.ondragover = (e) => {
     e.preventDefault();
 }
