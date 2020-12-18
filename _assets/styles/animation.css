@@ -21,6 +21,11 @@
     animation: pulseMic 1s infinite;
 }
 
+.getLocation:hover i {
+    animation: playBtnAnim 2s .1s 2;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
 @keyframes formAnim {
     0% {
         opacity: 0;

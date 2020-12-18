@@ -9,6 +9,8 @@ const emergencyFormOption = document.querySelector('.form-step-2');
 const validateFormOption = document.querySelector('.form-step-3');
 const nextBtnProfileForm = document.getElementById('next-btn-profile');
 const deseasaSubmitFormBtn = document.getElementById('deseaseFormSubmitBtn');
+let getLocation = document.querySelector('.getLocation');
+let locationCoordinates;
 
 // Form data
 let profileData;
@@ -101,6 +103,22 @@ validateFormOption.addEventListener('click', () => {
     validateFormOption.classList.remove('form-step-border')
 
 })
+
+getLocation.addEventListener('click',() => {
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        this.innerHTML = 'Geolocation is not supported'
+    }
+})
+
+function showPosition(pos) {
+    locationCoordinates = {
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude
+    }
+    console.log(locationCoordinates)
+}
 
 
 function finishProfileForm(e) {
@@ -268,6 +286,22 @@ function loadData(data) {
         validateForm.appendChild(item)
 
     }
+    let locationPar = document.createElement('p')
+    locationPar.setAttribute('class', 'label-principle')
+    locationPar.style.fontSize = '15px'
+    locationPar.style.textTransform = 'uppercase'
+    locationPar.style.letterSpacing = '1px'
+    locationPar.style.marginBottom = '20px'
+    locationPar.style.lineHeight = '22px'
+    locationPar.innerHTML = 'Below is your location: '
+    if(Object.values(locationCoordinates).length !== 0) {
+        validateForm.appendChild(locationPar)
+    }
+    let latlon = locationCoordinates.latitude + ',' + locationCoordinates.longitude;
+    let img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyCUWzvTm9vwPpmQzpBM83ptvk39gIQY3zM";
+    let map = document.createElement('div')
+    map.innerHTML = "<img src='"+img_url+"'>";
+    validateForm.appendChild(map)
 
     finishConsultBtn = document.createElement('button')
     finishConsultBtn.setAttribute('class','next-step-btn');
