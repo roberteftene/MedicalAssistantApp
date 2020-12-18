@@ -140,8 +140,8 @@
 
                 <input class="user-profile" type="date" id="birthday" name="trip-start" value="2018-07-22"
                     min="1920-01-01" max="2020-12-31" required>
-                <button type="submit" form="form-profile" class="next-step-btn" id="next-btn-profile" onclick="finishProfileForm(event)">Next step<i
-                        class="fas fa-arrow-right"></i></button>
+                <button type="submit" form="form-profile" class="next-step-btn" id="next-btn-profile"
+                    onclick="finishProfileForm(event)">Next step<i class="fas fa-arrow-right"></i></button>
             </form>
 
             <form action="" id="form-desease" class="form-actual form-desease">
@@ -198,12 +198,18 @@
                         placeholder="Describe here you emergency"></textarea>
                 </div>
 
+                <div class="emergency-location form-subsection">
+                    <label for="locationBtn" class="label-principle"> Press the button to share your location to find the closest
+                        medical assitant</label>
+                    <button id="locationBtn" class="getLocation" type="button"><i class="fas fa-compass"></i></button>
+                </div>
+
                 <div class="form-subsection">
                     <label for="start" class="label-principle">Please chose the last date when you went to an consult
                         regarding your emergency</label>
                 </div>
-                <input class="user-profile" type="date" id="last-consult" name="trip-start" value="2018-07-22" min="1920-01-01"
-                    max="2020-12-31" required>
+                <input class="user-profile" type="date" id="last-consult" name="trip-start" value="2018-07-22"
+                    min="1920-01-01" max="2020-12-31" required>
                 <div class="form-subsection">
                     <label for="" class="label-principle">If you have any images regarding your emergancy please drop
                         them bellow</label>
@@ -216,14 +222,15 @@
                     <p> Drop your images here </p>
                 </div>
 
-                <button id="deseaseFormSubmitBtn" type="submit" form="form-desease" class="next-step-btn">Verify details<i
-                        class="fas fa-arrow-right"></i></button>
+                <button id="deseaseFormSubmitBtn" type="submit" form="form-desease" class="next-step-btn">Verify
+                    details<i class="fas fa-arrow-right"></i></button>
 
             </form>
 
             <form id="form-validate" class="form-actual form-validate">
 
-                <label for="" class="label-principle"> Please find below your informations. If is something you would want to change please select from above at which section you would like to go back</label>
+                <label for="" class="label-principle"> Please find below your informations. If is something you would
+                    want to change please select from above at which section you would like to go back</label>
 
 
             </form>
@@ -246,6 +253,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
         integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
         crossorigin="anonymous"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUWzvTm9vwPpmQzpBM83ptvk39gIQY3zM&callback=initMap"
+        type="text/javascript"></script>
 </body>
 
 </html>

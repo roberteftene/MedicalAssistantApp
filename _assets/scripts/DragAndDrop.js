@@ -111,3 +111,4 @@ function addNegativeEffect() {
     }
     context.putImageData(imgData,0,0);
 }
+

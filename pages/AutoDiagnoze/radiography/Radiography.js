@@ -60,4 +60,14 @@ function invertColors(data) {
   }
 }
 
+document.querySelector('body').addEventListener('keypress', (e) => {
+  e.preventDefault()
+  if(e.keyCode === 13) {
+      drawSelectedImages(0)
+  }
+  if(e.keyCode === 32 ) {
+      startXRayScan.click()
+  }
+});
+
 window.addEventListener('load', init);
