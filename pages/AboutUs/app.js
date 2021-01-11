@@ -3,6 +3,8 @@ const goTopAudio = new Audio('goTop.mp3')
 const subscribeAudio = new Audio('success.mp3')
 const email = document.getElementById("email")
 const topBtn = document.getElementById("goTopBtn")
+const playbutton = document.getElementById("play-button");
+const video = document.querySelector("#about video");
 
 function messageSubscribed() {
   let valid = true
@@ -39,3 +41,12 @@ function goTop() {
       behavior: "smooth"
   })
 }
+
+playbutton.addEventListener("click", function() {
+  video.play();
+  video.style.visibility = 'visible';
+  video.classList.add("playing");
+  video.style.animation = 'presentationVideoAnim 2s';
+  playbutton.style.visibility = 'hidden'
+
+})

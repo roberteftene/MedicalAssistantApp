@@ -4,90 +4,80 @@
 }
 
 
-/* Example flex */
+/* the container with two cards */
 .container-ex {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
+  align-items: center;
+  
 }
 
 .card {
   background-color: #9b1a0c;
   margin: 60px;
   padding: 40px;
+  width: 50%;
+  height: 200px;
   color: #fff;
   border-radius: 10px;
-  transition: all 1s ease-out;
+  transition: all 2s ease-out;
+  box-shadow: 0px 5px 20px rgb(61, 34, 34);
+  font-size: 14px;
+  color: #f2f2f2;
+  display: block;
+  font-style:oblique;
 }
 
 .card:hover {
   transform: rotate(360deg);
-  background-color: gray;
+  background-color: rgb(80, 77, 77);
 }
 
-@media all and (max-width: 1220px) {
-  .center {
+
+/* mobile - tablet resize */
+@media all and (max-width: 1256px) {
+  .container-ex{
     flex-direction: column;
   }
-  .text-box2 {
-    height: 300px;
+  
+  .aboutRobert {
+    font-size: 20px;
   }
+  
 }
 
-@media all and (max-width: 890px) {
-
-
-  .container2
-  {
-    width: 650px;
+@media all and (max-width: 1021px) {
+  .aboutRobert {
+    font-size: 15px;
   }
-  .hover2:hover
-  {
-    width: 200px;
-    height: 150px; 
-    
-  }
-
-  .text-box2
-  {
-    top:10px;
-  }
-
-  .text-box2 h3
-  {
-    transform: scale(0.5);
-    
-  }
+  
 }
 
-/* Mobile media queries for navbar */
-
-@media all and (max-width: 650px) {
-
- 
-  .container2
-  {
-    width: 400px;
+@media all and (max-width: 660px) {
+  .aboutRobert {
+    font-size: 10px;
   }
 
-  .hover2:hover
+  .playBtn
   {
+    margin-top: 200px;
     
   }
 
-  .text-box2
-  {  top:10px;
-    width: 200px;
+
+  figure#about video
+  {
+    width: 300px;
+  
   }
 
-  .text-box2 h3
-  { 
-    transform: scale(0.5);
-    
+  .envelope, .paper
+  {
+     transform: scale(0.8);
   }
+
 
 }
-
-
 p {
   position: relative;
   text-align: center;
@@ -214,7 +204,7 @@ figure.team.hover h2 {
 /* center the images */
 .center-img 
 {
-  background-color: #212121;
+  background-color:  #212121;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,52 +213,6 @@ figure.team.hover h2 {
   height: 100%;
 
 }
-
-  /* containers with text */
-  
-  .container2 {
-    width: 45%;
-    margin: 0 auto;
-    padding: 4em 0;
-  }
-  
-  .text-box2 {
-    text-align: center;
-    background-color: #9b1a0c;
-    background-size: cover;
-    width: auto;
-    height: 250px;
-    border-radius: 15px ; 
-    box-shadow: 0px 5px 20px rgb(61, 34, 34);
-  }
-  
-  .hover2 {
-    position: relative;
-    top:18%;
-    margin: 0 auto;
-    text-align: center;
-    width: 75%;
-    transition: transform 400ms ease-in-out;
-    transition: 600ms ease-in-out;
-    border-radius: 15px ; 
-
-  }
-  
-  .text-box2 h3 {
-    margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
-    font-size: 18.5px;
-    color: #f2f2f2;
-    display: block;
-    font-style: oblique;
-    padding: 1em;
-  }
-  
-  .hover2:hover {
-    background: rgba(51,51,51,0.8);
-    transform: scale(1.1, 1.1);
-    border: 2px rgb(71, 4, 4) solid;
-  }
 
 /*subscribe form */
 .sign-up-container {
@@ -298,7 +242,7 @@ h1 {
   margin-top: 0;
   text-align: center;
   font-size: 1em;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .text-input,
@@ -310,43 +254,23 @@ h1 {
   border: none;
   border-radius: 2em;
   outline: none;
-  color:#a71f1f;
+  color:#a71f1f;border: 1px solid #999;
+ 
 }
 
-.button {
-  border: 1px solid #999;
-  -webkit-transition: background 0.1s, color 0.1s;
-  transition: background 0.1s, color 0.1s;
-}
+
 .button:hover {
   background: #a71f1f;
   color: #fef8e1;
 }
 
-.text-input {
-  background: #fff;
-    color: #333;
-}
-.text-input::-webkit-input-placeholder {
-  color: inherit;
-  font-style: italic;
-}
-.text-input::-moz-placeholder {
-  color: inherit;
-  font-style: italic;
-}
-.text-input:-ms-input-placeholder {
-  color: inherit;
-  font-style: italic;
-}
+
 .text-input::placeholder {
   color: inherit;
   font-style: italic;
 }
 
-.sign-up-form {
-  width: 100%;
-}
+
 .sign-up-form * {
   width: 100%;
 }
@@ -412,22 +336,7 @@ h1 {
           transform: scaleY(0.7) rotate(45deg);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
-.center
-{
-  display: flex;
-}
 
-
-
-.sdf
-{ 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  margin: 0;
-
-}
 
 /* Go top Button */
 .topBtn {
@@ -456,3 +365,88 @@ h1 {
 .fa-arrow-up {
     margin-left: 5px;
 }
+
+/* video container */
+
+
+.videocontainer
+{
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+.playBtn {
+  position: absolute;
+  top: 70%;
+  margin-bottom: 100px;
+  width: 240px;
+  transition: all .2s ease-in-out;
+}
+
+.playBtn:hover {
+  transform: scale(1.2);
+}
+
+@keyframes overlay {
+  30% {
+    left: 0;
+    width: 50%;
+  }
+  50% {
+    background: rgb(105, 10, 3);
+  }
+  80% {
+    left: 80%;
+    width: 20%;
+  }
+ 
+}
+@keyframes presentationVideoAnim {
+  0% {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  30% {
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+figure#about {
+  display: inline-block;
+  position: relative;
+  font-size: 0;
+  margin: 0;
+}
+
+
+figure#about video {
+
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+
+figure#about div {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  left: 0;
+}
+
+video.playing ~ div#vid-cover {
+  animation: overlay 20s forwards;
+  opacity: 0.8;
+  border-radius: 10;
+}
+
+
+
